@@ -1,0 +1,73 @@
+{
+  "repo": "ion-ops-bundle-plane",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for bundle scenarios with bounded scenario files, conflict explanations, and bounded memory input sets.",
+  "review_model": {
+    "terms": [
+      "dry-run spread",
+      "rename risk",
+      "operator cost",
+      "idempotence"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "dry-run spread",
+      "signal": 59,
+      "slack": 28,
+      "drag": 8,
+      "confidence": 56,
+      "score": 178,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "rename risk",
+      "signal": 45,
+      "slack": 35,
+      "drag": 31,
+      "confidence": 47,
+      "score": 79,
+      "lane": "hold"
+    },
+    {
+      "name": "edge",
+      "focus": "operator cost",
+      "signal": 71,
+      "slack": 51,
+      "drag": 21,
+      "confidence": 58,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "idempotence",
+      "signal": 77,
+      "slack": 24,
+      "drag": 27,
+      "confidence": 48,
+      "score": 145,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "dry-run spread",
+      "signal": 81,
+      "slack": 22,
+      "drag": 11,
+      "confidence": 83,
+      "score": 234,
+      "lane": "ship"
+    }
+  ]
+}
