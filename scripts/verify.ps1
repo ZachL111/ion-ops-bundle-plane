@@ -63,3 +63,9 @@ node tests/policy.test.js
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-ion-ops-bundle-detail.ps1
 
 node tests/domainReview.test.js
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-ion-ops-bundle-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-ion-ops-bundle-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

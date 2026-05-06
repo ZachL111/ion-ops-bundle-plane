@@ -1,0 +1,28 @@
+{
+  "repo": "ion-ops-bundle-plane",
+  "language": "JavaScript",
+  "category": "Automation",
+  "goal": "Develop a JavaScript command-oriented project for bundle scenarios with bounded scenario files, conflict explanations, and bounded memory input sets.",
+  "weights": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3
+  },
+  "thresholds": {
+    "ship": 209,
+    "watch": 97
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}

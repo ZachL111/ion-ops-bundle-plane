@@ -1,0 +1,17 @@
+{
+  "repo": "ion-ops-bundle-plane",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 209,
+    "watch": 97
+  },
+  "terms": [
+    "dry-run spread",
+    "rename risk",
+    "operator cost",
+    "idempotence"
+  ]
+}
